@@ -1,9 +1,5 @@
-export type VNode = {
-  type: string;
-  props: VNodeProps;
-  children: (VNode | string)[];
-};
+import type { VNode, VNodeProps } from "./vnode";
 
-export type VNodeProps = {
-  [key: string]: any;
+export const h = (type: string, props: VNodeProps, children: (VNode | string)[]) => {
+  return { type, props, children };
 };
