@@ -1,7 +1,7 @@
 import { VNode } from "./vnode";
 
 export type RootRenderFunction<HostElement = RendererElement> = (
-  message: string,
+  message: VNode,
   container: HostElement,
 ) => void;
 
