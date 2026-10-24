@@ -1,9 +1,9 @@
 import type { Component } from "./component";
 import type { RootRenderFunction } from "./renderer";
 
-export interface App<HostElement = any> {
+export type App<HostElement = any> = {
   mount(rootContainer: HostElement | string): void;
-}
+};
 
 export type CreateAppFunction<HostElement> = (rootComponent: Component) => App<HostElement>;
 
