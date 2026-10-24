@@ -13,8 +13,14 @@ export const createAppAPI = <HostElement>(
   return (rootComponent) => {
     const app: App = {
       mount(rootContainer: HostElement) {
-        const message = rootComponent.render!();
-        render(message, rootContainer);
+        const componentRender = rootComponent.setup!();
+
+        const updateComponent = () => {
+          const vnode = componentRender();
+          render(vnode, rootContainer);
+        };
+
+        updateComponent();
       },
     };
 
