@@ -1,5 +1,8 @@
 packages:
   - examples/*
+catalogMode: strict
 catalog:
+  "@types/node": ^26.6.5
+  typescript: ~6.0.3
   vite: npm:@voidzero-dev/vite-plus-core@1.3.0
   vite-plus: 1.3.0
